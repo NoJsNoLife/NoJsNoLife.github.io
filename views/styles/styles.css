@@ -43,8 +43,6 @@ textarea {
     outline: none;
 
     position: absolute;
-    width: 577px;
-    height: 48px;
     left: 400px;
     top: 200px;
 
@@ -153,12 +151,4 @@ button:hover {
     /* White */
     background-color: #AAB2D5;
     color: white;
-}
-#custom-tooltip {
-    display: none;
-    margin-left: 40px;
-    padding: 5px 12px;
-    background-color: #000000df;
-    border-radius: 4px;
-    color: #fff;
 }

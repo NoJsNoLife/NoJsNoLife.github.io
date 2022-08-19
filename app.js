@@ -8,11 +8,13 @@ const img = document.querySelector("#img")
 encriptar.addEventListener("click", (e) => {
     e.preventDefault()
     let texto = document.querySelector('textarea').value
+    if(validar(texto)) return alert("Solo se permiten letras minúsculas")
     encriptarTexto(texto)
 })
 desencriptar.addEventListener("click", (e) => {
     e.preventDefault()
     let texto = document.querySelector('textarea').value
+    if(validar(texto)) return alert("Solo se permiten letras minúsculas")
     desencriptarTexto(texto)
 })
 copiar.addEventListener("click", (e) => {
@@ -58,4 +60,9 @@ function showMsg(texto){
         document.getElementById("textcontent").innerHTML = texto
     }
 }
-
+function validar(texto = ""){
+    let regex = new RegExp(/([A-Z])|([0-9])|[ÁÉÍÓÚáéíóú]|\W|[|]/, "g")
+    let boolean = regex.test(texto)
+    console.log(boolean)
+    return boolean
+}
